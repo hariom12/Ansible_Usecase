@@ -1,0 +1,13 @@
+[Unit]
+Description=WebLogic Adminserver service
+ 
+[Service]
+Type=simple
+WorkingDirectory=/home/oracle/Weblogic/app/oracle/middleware/user_projects/domains/myFirstDomain
+ExecStart=/home/oracle/Weblogic/app/oracle/middleware/user_projects/domains/myFirstDomain/startWebLogic.sh
+ExecStop=/home/oracle/Weblogic/app/oracle/middleware/user_projects/domains/myFirstDomain/bin/stopWebLogic.sh
+User=oracle
+Group=oinstall
+ 
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,19 @@
+---
+resource_group: use_case
+virtual_network: myVnet
+vnet_address_prefix: "10.0.0.0/16"
+subnet_name: mySubnet 
+subnet_address_prefix: "10.0.1.0/24"
+public_ip_name: myPublicIP
+ip_allocation_method: Dynamic
+security_group_name: myNetworkSecurityGroup
+NIC_name: myNIC
+vm_name: myVmUseCase123
+vm_size: Standard_DS1_v2
+storage_account: usecase123
+ssh_public_key: 
+offer_name: RHEL
+publisher_name: RedHat
+sku: '7.3'
+version: latest
+

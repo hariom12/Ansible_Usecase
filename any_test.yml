@@ -1,0 +1,33 @@
+---
+- name: random tests
+  hosts: localhost
+  connection: local
+  tasks: 
+    - name: write into bash_profile
+      lineinfile:
+          path: "{{item}}"
+          line: export TEST=/usr/lib/jvm/
+          state: present
+      with_items:
+        #  - /root/.bash_profile
+          - ~/.bash_profile 
+      register: test123
+      failed_when: test123|failed
+      changed_when: test123|changed
+     # changed_when:  "'changed=0' not in test123.stdout"
+# become: true
+     # become_user: root
+    - debug: msg="{{test123}}"
+    - name: export the path 
+      shell : "{{item}}"
+      with_items:
+             - source ~/.bash_profile
+      #       - source /root/.bash_profile
+     # become: true
+     # become_user: root
+    - shell: |
+          type -p javac|xargs readlink -f|xargs dirname|xargs dirname
+          echo changed=0
+      register: here123
+      changed_when:  "'changed=0' not in here123.stdout"
+      debug: msg="{{here123}}"

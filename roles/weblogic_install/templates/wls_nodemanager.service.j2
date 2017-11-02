@@ -1,0 +1,15 @@
+[Unit]
+Description=WebLogic nodemanager service
+ 
+[Service]
+Type=simple
+# Note that the following three parameters should be changed to the correct paths
+# on your own system
+WorkingDirectory=/home/oracle/Weblogic/app/oracle/middleware/user_projects/domains/myFirstDomain
+ExecStart=/home/oracle/Weblogic/app/oracle/middleware/user_projects/domains/myFirstDomain/bin/startNodeManager.sh
+ExecStop=/home/oracle/Weblogic/app/oracle/middleware/user_projects/domains/myFirstDomain//bin/stopNodeManager.sh
+User=oracle
+Group=oinstall
+ 
+[Install]
+WantedBy=multi-user.target
