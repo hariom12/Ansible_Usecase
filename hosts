@@ -1,4 +1,8 @@
 [new_machine]
 
 [controller]
-localhost new_machine={{azure_vm.properties.networkProfile.networkInterfaces[0].properties.ipConfigurations[0].properties.publicIPAddress.properties.ipAddress}} 
+13.92.113.64 ansible_user=az2325 ansible_password=antony&7zacharia new_machine={{azure_vm.properties.networkProfile.networkInterfaces[0].properties.ipConfigurations[0].properties.publicIPAddress.properties.ipAddress}} 
+
+[new_machine:vars]
+ansible_user=azureuser
+

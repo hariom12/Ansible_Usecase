@@ -1,0 +1,24 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminUsername": {
+      "value": "azureuser"
+    },
+    "sshKeyData": {
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaic4FHbWoZXtKhXX6jkmW5f9wheLRyuGKF4p0NknfL99TaNqqB71P0haB7IMkAnh2tdR2H2JV4edQhb9nfdkjigGAS3P2+bVonbngODLYFmBOzIq67FSTmDeAp8MQX19ZimElTcPY1tFUlpZfQBehVX00wyIEvCeRl9x9g11fMvmePpvjPd83PZjrLcf4bOgvtHyZemuVuCfPG4JGpqt1cbaQg8ejHuCdzhEL8UbJ7Va2ahv0UM2NCQcfxbZqf5W5bE1mI/D7dw1rQj+1UPxpTzloKJoGFbOaR3zxFNMqp9/EwkJ9vdWE9jWJlQkrWQB8letaDb27rA2POe/HfxLF az2325@engspansiblerhel"
+    },
+	"VirtualMachineOSPublisher": {
+      "value": "RedHat"
+    },
+	"VirtualMachineOSOffer": {
+      "value": "RHEL"
+    },
+	"VirtualMachineOSSku": {
+      "value": "7.3"
+    },
+	"VirtualMachineOSVersion": {
+      "value": "latest"
+    }
+  }
+}

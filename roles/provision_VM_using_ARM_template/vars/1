@@ -1,0 +1,5 @@
+---
+path_to_ARM_template: ./template_location/temp_ssh.json
+path_to_parameter_template: ./template_location/parameter_ssh.json
+
+

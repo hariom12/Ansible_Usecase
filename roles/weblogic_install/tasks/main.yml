@@ -35,20 +35,20 @@
 
 
 - name: install the required version of java
-  get_url: 
-     url: "{{ora_jdk_url}}"
-     headers: "{{installation_headers}}"
-     dest: "{{ora_home}}/app/oracle/{{JDK_name}}.tar.gz"
-- name: untar the tar file
-  shell: tar xzf "{{JDK_name}}.tar.gz"
+  copy: 
+     src : "{{java_jdk}}"
+     dest: "{{ora_home}}/app/oracle/{{JDK_name}}.rpm"
+     mode: 0777
+- name: unpack the rpm file
+  command: "rpm -Uvh {{JDK_name}}.rpm"
   args:
-   chdir:  "{{ora_home}}/app/oracle"
-
+    chdir: "{{ora_home}}/app/oracle/"
+  ignore_errors: true
 - name: set the variable JAVA_HOME in the playbook context
-  command: find "{{ora_home}}/app/oracle" -name jdk*  -type d -print -quit
-  args: 
-   chdir: "{{ora_home}}/app/oracle"
+  shell: readlink -f /usr/bin/java | sed "s:jre/bin/java::"
   register: JAVA_HOME
+  become: true
+  become_user: "{{oracle_user}}"
 
 - debug: msg="{{JAVA_HOME}}"
   
@@ -119,5 +119,3 @@
    mode: 0755
   become: true
   become_user: "{{oracle_user}}"
-  
-

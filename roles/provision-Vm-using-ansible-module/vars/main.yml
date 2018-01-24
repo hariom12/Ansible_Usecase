@@ -1,5 +1,5 @@
 ---
-resource_group: use_case
+resource_group: EngSpResourceGroup
 virtual_network: myVnet
 vnet_address_prefix: "10.0.0.0/16"
 subnet_name: mySubnet 
@@ -8,9 +8,9 @@ public_ip_name: myPublicIP
 ip_allocation_method: Dynamic
 security_group_name: myNetworkSecurityGroup
 NIC_name: myNIC
-vm_name: myVmUseCase123
-vm_size: Standard_DS1_v2
-storage_account: usecase123
+vm_name: RhelDbWLSAppDeployVm1234
+vm_size: Standard_D1_v2 
+storage_account: engspstorageaccount
 ssh_public_key: 
 offer_name: RHEL
 publisher_name: RedHat

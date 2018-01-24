@@ -1,6 +1,38 @@
 ---
 - name: Provision a vm using ARM template 
-  hosts: localhost
-  connection: localhost
-  
+  hosts: controller
+  connection: local
+  tasks:
+      - include_role:
+           name: provision_VM_using_ARM_template
+
+- name: setup the new machine
+  hosts: new_machine
+  tasks:
+  - name: get epel and install ansible
+    command: "{{item}}"
+    with_items:
+          - rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+          - yum -y install ansible
+          - ansible --version
+    become: true
+    become_user: root
+    ignore_errors: yes
+    register: get_epel
+
+  - debug: msg="{{get_epel}}"
+  - name: open the firewall for http requests
+    shell: |
+         systemctl start firewalld.service
+         firewall-cmd --zone=public --add-service=http
+         firewall-cmd --zone=public --add-port=7001/tcp
+    become: true
+    become_user: root
+
+- name: Install weblogic on the new system
+  hosts: new_machine
+  roles:
+   - role: weblogic_install
+     become: true
+     become_user: root
 
