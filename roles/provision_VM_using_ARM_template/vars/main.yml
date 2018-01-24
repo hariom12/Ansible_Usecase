@@ -1,5 +1,5 @@
 ---
-path_to_ARM_template: ./template_location/temp_ssh.json
-path_to_parameter_template: ./template_location/parameter_ssh.json
+path_to_ARM_template: /var/lib/awx/projects/_10__ansible_deployment/template_location/temp_ssh.json
+path_to_parameter_template: /var/lib/awx/projects/_10__ansible_deployment/template_location/parameter_ssh.json
 
 
