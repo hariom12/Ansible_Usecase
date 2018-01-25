@@ -6,7 +6,7 @@
       "value": "azureuser"
     },
     "sshKeyData": {
-      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCaic4FHbWoZXtKhXX6jkmW5f9wheLRyuGKF4p0NknfL99TaNqqB71P0haB7IMkAnh2tdR2H2JV4edQhb9nfdkjigGAS3P2+bVonbngODLYFmBOzIq67FSTmDeAp8MQX19ZimElTcPY1tFUlpZfQBehVX00wyIEvCeRl9x9g11fMvmePpvjPd83PZjrLcf4bOgvtHyZemuVuCfPG4JGpqt1cbaQg8ejHuCdzhEL8UbJ7Va2ahv0UM2NCQcfxbZqf5W5bE1mI/D7dw1rQj+1UPxpTzloKJoGFbOaR3zxFNMqp9/EwkJ9vdWE9jWJlQkrWQB8letaDb27rA2POe/HfxLF az2325@engspansiblerhel"
+      "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDkQzcRK7+DR/Cq2uCeuSboxodGv1Se25UAF6mpXdd8pUImaGUhGfIoVMdhjOlqsSeT3jktkhqNm7+qeKQa/Qu5sb+6fDc+UR6slUH9gxYJsR9s/28MN4TDyJjEV9BqQyZ/3NVkHN2xYsvEEiOkKE5PVCTIgVZ8xOr/wtruMmfXFQo+yBskd4+/B4MJbemd+l/XIdbIGVq1DPnG3e3nVuWrpnVhFlIH01DZJfOHmQY8wlXKi8vb5qfg6J0vHnOTIwBHzRN7n7BD4LWZ0Hb0l7ul2kqjvH+tujURjV4r2s+L2AIMYbGW0yOWBNG3CV0OVlT5jLXRLNzs4vn0TCGebxyD awx@engspansiblerhel"
     },
 	"VirtualMachineOSPublisher": {
       "value": "RedHat"
