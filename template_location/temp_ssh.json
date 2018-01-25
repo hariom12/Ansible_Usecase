@@ -68,7 +68,22 @@
               "priority": 123,
               "direction": "Inbound"
             }
-          }
+          },
+           {
+            "name": "Application_Rule",
+            "properties": {
+              "description": "Locks Application port to 7001.",
+              "protocol": "Tcp",
+              "sourcePortRange": "*",
+              "destinationPortRange": "7001",
+              "sourceAddressPrefix": "*",
+              "destinationAddressPrefix": "*",
+              "access": "Allow",
+              "priority": 124,
+              "direction": "Inbound"
+            }
+
+            }
         ]
       }
     },
