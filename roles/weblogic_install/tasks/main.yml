@@ -114,7 +114,7 @@
   
 - name: deploy the war file
   copy:
-   src: ~/sample.war
+   src: /home/az2325/sample.war
    dest: "{{MW_HOME}}/user_projects/domains/myFirstDomain/autodeploy"
    mode: 0755
   become: true
