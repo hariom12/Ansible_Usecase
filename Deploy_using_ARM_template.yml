@@ -30,6 +30,23 @@
     become: true
     become_user: root
 
+- name: add the new mysql server
+  hosts: new_machine
+  roles:
+     - role: ansible-role-mysql-master
+       become: yes
+       become_user: root
+
+- name: Create database
+  hosts: new_machine
+  tasks:
+   - name: install database in mysql server
+     mysql_db:
+       name: mydb123
+       state: present
+       login_user: root
+       login_password: root
+
 - name: Install weblogic on the new system
   hosts: new_machine
   roles:
